@@ -20,6 +20,10 @@
         .navbar-nav {
             flex-direction: row;
         }
+
+        .card-shadow {
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
     </style>
 </head>
 
@@ -37,19 +41,21 @@
         </nav>
     </header>
 
-    <h2>Libros</h2>
-    <div class="container mb-5">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="container text-center">
+        <h2>Libros</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4 my-5">
+            <?php foreach($libros as $libro) : ?>
             <div class="col">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
+                <div class="card h-100 card-shadow">
+                    <!-- <img src="<?= $libro['imagen'] ?>" class="card-img-top" alt="..."> -->
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title"><?= $libro['titulo'] ?></h5>
+                        <p class="card-text">$<?= $libro['precio'] ?></p>
                     </div>
                 </div>
             </div>
-            <div class="col">
+            
+            <!-- <div class="col">
                 <div class="card h-100">
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
@@ -94,7 +100,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+        <?php endforeach; ?>
     </div>
 </body>
 
