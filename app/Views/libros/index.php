@@ -35,7 +35,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"> <a class="nav-link" href="<?php echo base_url(''); ?>">Home</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="#">Productos</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#">Contacto</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="<?php echo base_url('contacto'); ?>">Contacto</a> </li>
                 </ul>
             </div>
         </nav>
@@ -52,6 +52,7 @@
                         <h5 class="card-title"><?= $libro['titulo'] ?></h5>
                         <p class="card-text">$<?= $libro['precio'] ?></p>
                     </div>
+                    <button type="button" class="btn btn-outline-secondary"><a class="text-decoration-none text-dark" href="<?= base_url(('libros/ver/' . $libro['id'])) ?>">Ver más...</a></button>
                 </div>
             </div>
             

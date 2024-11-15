@@ -35,7 +35,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"> <a class="nav-link" href="">Home</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="<?php echo base_url('libros'); ?>">Productos</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#">Contacto</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="<?php echo base_url('contacto'); ?>">Contacto</a> </li>
                 </ul>
             </div>
         </nav>
